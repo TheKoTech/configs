@@ -11,6 +11,9 @@ end
 
 require("animations")
 require("keybinds")
+if (file_exists("cursor.lua")) then
+  require("cursor")
+end
 
 if (file_exists("autostart.lua")) then
   require("autostart")
@@ -20,15 +23,13 @@ if (file_exists("monitors.lua")) then
   require("monitors")
 end
 
-if (file_exists("cursor.lua")) then
-  require("cursor")
-end
 
 hl.config({
   general = {
     border_size = 2,
     gaps_in = 4,
     gaps_out = 8,
+
     col = {
       active_border = { colors = { "rgba(33ccffee)", "rgba(33ccffee)", "rgba(33ccffee)", "rgba(33ccffee)", "rgba(33ccffee)", "rgba(33ccffee)", "rgba(33ccffee)", "rgba(3366FFee)", "rgba(590900ee)", "rgba(ff5c16ee)" }, angle = 23 },
       inactive_border = "rgba(ffffff40)",
@@ -42,7 +43,7 @@ hl.config({
 
     shadow = {
       enabled = true,
-      range = 16,
+      range = 32,
       render_power = 3,
       sharp = false,
       color = "rgba(06121a6a)"
@@ -62,6 +63,10 @@ hl.config({
     preserve_split = true,
   },
 
+  scrolling = {
+    explicit_column_widths = "0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0"
+  },
+
   input = {
     kb_layout = "us,ru",
     kb_options = "grp:win_space_toggle, caps:super",
@@ -71,7 +76,7 @@ hl.config({
     accel_profile = "custom 10 0.0 9.0 36.0 81.0",
     sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
-    special_fallthrough = true,
+    special_fallthrough = false,
 
     touchpad = {
       natural_scroll = false,
