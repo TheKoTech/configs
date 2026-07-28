@@ -25,14 +25,16 @@ local names = {
   },
 
   apps = {
-    { "AmneziaVPN", '"AmneziaVPN", { workspace = "5 silent" }' },
-    { "Chromium",   '"chromium", { workspace = "1 silent" }' },
-    { "Zen",        '"zen-browser", { workspace = "1 silent" }' },
-    { "Steam",      '"steam", { workspace = "6 silent" }' },
-    { "Telegram",   '"telegram", { workspace = "telegram:magic silent" }' },
-    { "Discord",    '"discord", { workspace = "special:magic silent" }' },
-    { "Vesktop",    '"vesktop", { workspace = "special:magic silent" }' },
-    { "Equibop",    '"equibop", { workspace = "special:magic silent" }' },
+    { "AmneziaVPN",  '"AmneziaVPN", { workspace = "5 silent" }' },
+    { "Chromium",    '"chromium", { workspace = "1 silent" }' },
+    { "Zen",         '"zen-browser", { workspace = "1 silent" }' },
+    { "Zen_proxy",   '"zen-browser -P justhost-proxy", { workspace = "6 silent" }' },
+    { "Steam",       '"steam", { workspace = "6 silent" }' },
+    { "Telegram",    '"Telegram", { workspace = "telegram:magic silent" }' },
+    { "Discord",     '"discord", { workspace = "special:magic silent" }' },
+    { "Vesktop",     '"vesktop", { workspace = "special:magic silent" }' },
+    { "Equibop",     '"equibop", { workspace = "special:magic silent" }' },
+    { "Thunderbird", '"thunderbird", { workspace = "10 silent" }' },
   },
 }
 
@@ -111,4 +113,5 @@ for _, item in pairs(selected.apps) do
 end
 
 writeLine('end)')
+writeLine('')
 file:close()

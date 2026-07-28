@@ -49,7 +49,7 @@ push() {
 
 group_order=()
 
-push "A) Hyprland Required" hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gnome hyprpolkitagent wireplumber
+push "A) Hyprland Required" hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gnome hyprpolkitagent hyprshutdown wireplumber
 push "B) Hyprland Optional" hyprlock hyprshot-git hyprsunset hyprcursor hyprsysteminfo grimblast-git clipse hyprpicker
 push "C) AMD" rocm-smi-libs
 push "D) Display Manager" sddm sddm-kcm qt5-declarative
