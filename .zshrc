@@ -60,10 +60,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls='ls --color=auto'
-alias grep='rg'
-alias ls='eza -la'
-alias cat='bat --color=always'
-alias du='dust'
 alias lazy='lazygit'
 
 # You may also like to assign a key (Ctrl-O) to this command:
@@ -88,9 +84,6 @@ art() {
   fi
 }
 
-art-tow() {
-  arttime --nolearn --theme light --hours 24 -a saturn2 -t "The Outer Worlds"
-}
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
@@ -164,7 +157,11 @@ eval "$(starship init zsh)"
 # pnpm
 export PNPM_HOME="/home/welnyr/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+# anthropic
+export ANTHROPIC_BASE_URL="https://pass.v-span.ru:8443"
+export ENABLE_TOOL_SEARCH=true
