@@ -12,7 +12,7 @@
       "default_config_options": {
         "fast": true,
         "mode": "default",
-        "model": "opus",
+        "model": "sonnet",
       },
       "type": "registry",
     },
