@@ -62,6 +62,7 @@ link ".config/hypr/" "keybinds.lua"
 link ".config/hypr/" "autostart.lua"
 link ".config/hypr/" "cursor.lua"
 link ".config/hypr/" "animations.lua"
+link ".config/hypr/" "qt.lua"
 
 link ".config/kitty/" "kitty.conf"
 link ".config/kitty/" "kitty-logo.png"
@@ -73,8 +74,21 @@ link ".config/lf/" "icons"
 link ".config/lf/" "lfrc"
 
 
-link ".config/waybar/" "config.jsonc"
-link ".config/waybar/" "style.css"
+if [ -L "$HOME/.config/quickshell" ]; then
+  ln -sfn "$SCRIPT_DIR/.config/quickshell" "$HOME/.config/quickshell" && gum style --foreground 2 "~/.config/quickshell - linked"
+elif [ -e "$HOME/.config/quickshell" ]; then
+  if gum confirm "$(gum style --foreground 214 --bold "~/.config/quickshell") exists. Replace?"; then
+    mkdir -p "$BKP_DIR/.config"
+    mv -b "$HOME/.config/quickshell" "$BKP_DIR/.config/quickshell"
+    ln -sfn "$SCRIPT_DIR/.config/quickshell" "$HOME/.config/quickshell" && gum style --foreground 2 "~/.config/quickshell - linked"
+    gum style --foreground 5 "Backup saved to $BKP_DIR/.config/quickshell"
+  else
+    gum style --foreground 3 "~/.config/quickshell - skipped"
+  fi
+else
+  mkdir -p "$HOME/.config"
+  ln -sfn "$SCRIPT_DIR/.config/quickshell" "$HOME/.config/quickshell" && gum style --foreground 2 "~/.config/quickshell - linked"
+fi
 
 link ".config/zed/snippets/" "typescript.json"
 link ".config/zed/themes/" "sublime-material-theme.json"

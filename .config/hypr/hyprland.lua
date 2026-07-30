@@ -15,6 +15,10 @@ if (file_exists("cursor.lua")) then
   require("cursor")
 end
 
+if (file_exists("qt.lua")) then
+  require("qt")
+end
+
 if (file_exists("autostart.lua")) then
   require("autostart")
 end
@@ -112,7 +116,7 @@ hl.window_rule({
 
 hl.layer_rule({
   name = "overlays",
-  match = { namespace = "(waybar|notifications|launcher)" },
+  match = { namespace = "(quickshell.*|notifications|launcher)" },
   ignore_alpha = true,
   blur = true,
 })
@@ -121,6 +125,6 @@ hl.layer_rule({
 -- No animations for shit that doesn't need animations
 hl.layer_rule({
   name = "noanim",
-  match = { namespace = "(hyprpaper|waybar|hyprpicker)" },
+  match = { namespace = "(hyprpaper|quickshell.*|hyprpicker)" },
   no_anim = true,
 })

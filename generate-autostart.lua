@@ -8,7 +8,7 @@ end
 
 local names = {
   essential = {
-    { "Waybar",           '"waybar"' },
+    { "Quickshell",       '"qs -c shell"' },
     { "Hyprpaper",        '"hyprpaper"' },
     { "Random_wallpaper", '"~/.config/hypr/randomize-wp.sh"' },
     { "Dunst",            '"dunst"' },

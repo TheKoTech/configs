@@ -59,8 +59,8 @@ select_applications() {
 
 get_app_name() {
   case "$1" in
-    "Waybar")
-      echo "waybar"
+    "Quickshell")
+      echo "qs -c shell"
       ;;
     "Hyprpaper")
       echo "hyprpaper"
@@ -253,7 +253,7 @@ show_summary() {
 
 # Define application groups here
 define_app_groups() {
-  push_group "Core System" Waybar Hyprpaper Dunst Clipse Tmux
+  push_group "Core System" Quickshell Hyprpaper Dunst Clipse Tmux
   push_group "System Utilities" Bluetooth_applet Network_applet Opentabletdriver dbus-screen-sharing
   push_group "Terminal Sessions" Kitty
   push_group "Applications" Chromium Zen Steam
