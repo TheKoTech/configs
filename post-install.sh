@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+
 # Debug mode flag - set to true to enable debug mode
 DEBUG_MODE=false
 
@@ -54,7 +56,7 @@ push "B) Hyprland Optional" hyprlock hyprshot-git hyprsunset hyprcursor hyprsyst
 push "C) AMD" rocm-smi-libs
 push "D) Display Manager" sddm sddm-kcm qt5-declarative
 push "E) Terminal Tools" zsh nano vi vim btop lf tmux fzf arttime-git man vnstat eza ripgrep
-push "F) Basic Applications" kitty dunst fuzzel waybar bemoji gnome-calendar
+push "F) Basic Applications" kitty dunst fuzzel quickshell qt6ct bemoji gnome-calendar
 push "G) Fonts" ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-font-awesome
 push "H) Audio" noise-suppression-for-voice ladspa rnnoise lsp-plugins
 push "I) System Utilities" nautilus pavucontrol vlc network-manager-applet gnome-keyring wl-clipboard
@@ -117,6 +119,12 @@ fi
 
 if gum confirm "Enable dark mode?"; then
   run_command "dconf write /org/gnome/desktop/interface/color-scheme \"'prefer-dark'\""
+fi
+
+if gum confirm "Install custom fonts (monogram)?"; then
+  run_command "mkdir -p \"$HOME/.local/share/fonts\""
+  run_command "cp -f \"$SCRIPT_DIR/fonts/\"*.ttf \"$HOME/.local/share/fonts/\""
+  run_command "fc-cache -f"
 fi
 
 if gum confirm "Link configs?"; then
