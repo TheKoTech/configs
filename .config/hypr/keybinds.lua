@@ -3,7 +3,7 @@ hl.bind("SUPER + SHIFT + ALT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + SHIFT + ALT + P", hl.dsp.exec_cmd("hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'"))
 hl.bind("SUPER + SHIFT + ALT + R", hl.dsp.exec_cmd("hyprshutdown -t 'Shutting down...' --post-cmd 'reboot'"))
 
-hl.bind("SUPER + G", hl.dsp.exec_cmd("kitty -e tmux new-session -t main -s main-$(date +%s)"))
+hl.bind("SUPER + G", hl.dsp.exec_cmd("kitty -e zellij attach --create main"))
 hl.bind("SUPER + SHIFT + U", hl.dsp.exec_cmd("kitty -e ssh justhost -t tmux new-session -A -s main"))
 hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("kitty -e ssh tiwi -t tmux new-session -A -s main"))
 hl.bind("SUPER + SHIFT + G", hl.dsp.exec_cmd("kitty"))
@@ -13,7 +13,7 @@ hl.bind("SUPER + S", hl.dsp.exec_cmd("fuzzel"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd("kitty --class clipse -e 'clipse' && focusewindow clipse"))
 hl.bind("SUPER + ALT + V", hl.dsp.exec_cmd("bemoji -c -n"))
 
-hl.bind("SUPER + SHIFT + ALT + G", hl.dsp.exec_cmd("kitty -e tmux new-session -t ssh -s ssh-$(date +%s)"))
+hl.bind("SUPER + SHIFT + ALT + G", hl.dsp.exec_cmd("kitty -e zellij attach --create ssh"))
 
 hl.bind("SUPER + SHIFT + X", hl.dsp.window.close())
 hl.bind("SUPER + SHIFT + ALT + X", hl.dsp.window.kill())

@@ -92,6 +92,9 @@
     "QML": {
       "tab_size": 4,
     },
+    "Kdl": {
+      "tab_size": 4,
+    },
   },
 
   "git_panel": {

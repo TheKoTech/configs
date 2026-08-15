@@ -46,7 +46,7 @@ link ".config/clipse/" "custom_theme.json"
 link ".config/dunst/" "dunstrc"
 
 link ".config/fastfetch/" "config.jsonc"
-link ".config/fastfetch/" "arch.txt"
+link ".config/fastfetch/" "mauzy.txt"
 
 link ".config/fuzzel/" "fuzzel.ini"
 
@@ -75,6 +75,9 @@ link ".config/lf/" "lfrc"
 
 link ".config/waybar/" "config.jsonc"
 link ".config/waybar/" "style.css"
+
+link ".config/zellij/" "config.kdl"
+link ".config/zellij/layouts/" "default.kdl"
 
 link ".config/zed/snippets/" "typescript.json"
 link ".config/zed/themes/" "sublime-material-theme.json"

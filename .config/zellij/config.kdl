@@ -1,0 +1,12 @@
+mouse_mode true
+theme "catpuccin-frappe"
+
+keybinds {
+    pane {
+        bind "\\" { NewPane "Right"; }
+        bind "|" { NewPane "Right"; }
+        bind "-" { NewPane "Down"; }
+        bind "_" { NewPane "Down"; }
+    }
+
+}

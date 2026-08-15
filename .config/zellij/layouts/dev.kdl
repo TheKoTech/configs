@@ -1,0 +1,17 @@
+layout {
+    default_tab_template {
+        children
+        pane size=2 borderless=true {
+            plugin location="status-bar"
+        }
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+    }
+
+    tab name="zsh"
+
+    tab name="lazy" {
+        pane command="lazygit"
+    }
+}

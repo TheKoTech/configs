@@ -1,77 +1,107 @@
-//   _____ _____ _____ _____ _____ _____ _____ _____ _____
-//  |   __|  _  |   __|_   _|   __|   __|_   _|     |  |  |
-//  |   __|     |__   | | | |   __|   __| | | |   --|     |
-//  |__|  |__|__|_____| |_| |__|  |_____| |_| |_____|__|__|  HYPRLAND
-//
-//  by Bina
-
 {
-	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-	"logo": {
-		"source": "~/.config/fastfetch/arch.txt",
-		"type": "auto",
-		"height": 18,
-		"padding": {
-			"top": 2
-		}
-	},
-	"display": {
-		"separator": " "
-	},
-	"modules": [
-		"break",
-		{
-			"type": "title",
-			"keyWidth": 10
-		},
-		"break",
-		{
-			"type": "os",
-			"key": " ",
-			"keyColor": "34" // = color4
-		},
-		{
-			"type": "kernel",
-			"key": " ",
-			"keyColor": "34"
-		},
-		{
-			"type": "packages",
-			"format": "{} (pacman)",
-			"key": " ",
-			"keyColor": "34"
-		},
-		{
-			"type": "shell",
-			"key": " ",
-			"keyColor": "34"
-		},
-		{
-			"type": "terminal",
-			"key": " ",
-			"keyColor": "34"
-		},
-		{
-			"type": "wm",
-			"key": " ",
-			"keyColor": "34"
-		},
-		{
-			"type": "terminalfont",
-			"key": " ",
-			"keyColor": "34"
-		},
-		{
-			"type": "uptime",
-			"key": " ",
-			"keyColor": "34"
-		},
-		{
-			"type": "datetime",
-			"format": "{1}-{3}-{11}",
-			"key": " ",
-			"keyColor": "34"
-		},
-		"break"
-	]
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/mauzy.txt",
+    "type": "auto",
+    "height": 16,
+    "padding": {
+      "top": 2,
+    },
+    "color": {
+      "1": "#cc6666",
+      "2": "#f0c574",
+      "3": "#92cc62",
+      "4": "#88D7C1",
+      "5": "#6b98cc",
+      "6": "#c16ec9",
+    },
+  },
+  "display": {
+    "separator": " ",
+  },
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "keyWidth": 10,
+    },
+    "break",
+    {
+      "type": "os",
+      "key": " ",
+      "keyColor": "31",
+    },
+    {
+      "type": "kernel",
+      "key": " ",
+      "keyColor": "31",
+    },
+    {
+      "type": "packages",
+      "format": "Pacman - {pacman}",
+      "key": " ",
+      "keyColor": "31",
+    },
+    {
+      "type": "wm",
+      "key": " ",
+      "keyColor": "33",
+    },
+    {
+      "type": "shell",
+      "key": " ",
+      "keyColor": "33",
+    },
+    {
+      "type": "terminal",
+      "key": " ",
+      "keyColor": "33",
+    },
+    "break",
+    {
+      "type": "board",
+      "key": "󰘚 ",
+      "keyColor": "32",
+    },
+    {
+      "type": "cpu",
+      "key": " ",
+      "keyColor": "36",
+    },
+    {
+      "type": "gpu",
+      "key": " ",
+      "keyColor": "36",
+    },
+    {
+      "type": "memory",
+      "format": "",
+      "key": " ",
+      "keyColor": "36",
+    },
+    {
+      "type": "physicaldisk",
+      "hideVirtual": true,
+      "format": "{name}",
+      "key": " ",
+      "keyColor": "34",
+    },
+    {
+      "type": "monitor",
+      "key": "󰍹 ",
+      "keyColor": "35",
+    },
+    // "break",
+    // {
+    //   "type": "uptime",
+    //   "key": " ",
+    //   "keyColor": "35",
+    // },
+    // {
+    //   "type": "datetime",
+    //   "format": "{hour}:{minute}:{second} {day-in-month}.{month}.{year}",
+    //   "key": " ",
+    //   "keyColor": "35",
+    // },
+  ],
 }

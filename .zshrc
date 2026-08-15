@@ -3,10 +3,7 @@
 autoload -Uz promptinit
 promptinit
 
-# ket 🐱
-if [ "$TERM" = "xterm-kitty" ]; then
-  kitten icat --align left --use-window-size 21,9,256,256  ~/.config/kitty/kitty-logo.png
-fi
+fastfetch
 
 parse_git_dirty() {
   git_status="$(git status 2> /dev/null)"
@@ -61,6 +58,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls='ls --color=auto'
 alias lazy='lazygit'
+alias zj='zellij'
 
 # You may also like to assign a key (Ctrl-O) to this command:
 #     bind '"\C-o":"lfcd\C-m"'  # bash

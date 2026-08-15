@@ -13,9 +13,9 @@ local names = {
     { "Random_wallpaper", '"~/.config/hypr/randomize-wp.sh"' },
     { "Dunst",            '"dunst"' },
     { "Clipse",           '"clipse -listen"' },
-    { "Tmux",             '"tmux new-session -d -s main"' },
+    { "Zellij",           '"zellij attach --create-background main"' },
     { "Polkit",           '"systemctl --user start hyprpolkitagent"' },
-    { "Kitty",            '"kitty -e tmux new-session -t main -s main-$(date +%s)", { workspace = "special:terminal silent" }' },
+    { "Kitty",            '"kitty -e zellij attach --create main", { workspace = "special:terminal silent" }' },
   },
 
   optional = {
