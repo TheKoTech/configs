@@ -105,5 +105,17 @@
     "bindings": {
       "ctrl-k r": "agent::Reject"
     }
+  },
+  {
+    "context": "AcpThread",
+    "unbind": {
+      "alt-shift-a": "agent::AllowOnce"
+    }
+  },
+  {
+    "context": "AcpThread",
+    "bindings": {
+      "alt-shift-w": "agent::AllowOnce"
+    }
   }
 ]

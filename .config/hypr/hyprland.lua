@@ -110,6 +110,18 @@ hl.window_rule({
   move = { 1100, 58 } -- # qwq percent no worky,
 })
 
+hl.window_rule({
+  name = "zed-notifications",
+  match = { initial_class = "^dev.zed.Zed$", title = "^$" },
+  float = true,
+  stay_focused = false,
+  no_initial_focus = true,
+  focus_on_activate = false,
+  no_focus = true,
+  move = { -648,1331 },
+  size = { 615, 85 },
+})
+
 hl.layer_rule({
   name = "overlays",
   match = { namespace = "(waybar|notifications|launcher)" },
@@ -124,3 +136,4 @@ hl.layer_rule({
   match = { namespace = "(hyprpaper|waybar|hyprpicker)" },
   no_anim = true,
 })
+
